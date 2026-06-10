@@ -1,6 +1,5 @@
 import { Type } from 'typebox';
 import {
-  ResponseTypeEnum,
   ResponseTypeFastPagingEnum,
   PageNumber,
   PageNumberEnd,

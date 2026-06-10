@@ -3,7 +3,6 @@ import {
   IdentifierTypeEnum,
   ConnectionTypeEnum,
   ResponseTypeEnum,
-  ResponseTypeFastPagingEnum,
   PageNumber,
   PageNumberEnd,
   TableName,
