@@ -1,0 +1,101 @@
+{
+  "id": "xpoz",
+  "name": "Xpoz",
+  "description": "Social media intelligence tools for Twitter/X, Instagram, Reddit, and TikTok. Access user profiles, posts, comments, engagement data, and keyword search across platforms.",
+  "version": "1.0.0",
+  "contracts": {
+    "tools": [
+      "getTwitterUser",
+      "getTwitterUsers",
+      "searchTwitterUsers",
+      "getTwitterUserConnections",
+      "getTwitterUsersByKeywords",
+      "getTwitterPostsByIds",
+      "getTwitterPostsByAuthor",
+      "getTwitterPostsByKeywords",
+      "getTwitterPostRetweets",
+      "getTwitterPostQuotes",
+      "getTwitterPostComments",
+      "getTwitterPostInteractingUsers",
+      "countTweets",
+      "getInstagramUser",
+      "searchInstagramUsers",
+      "getInstagramUserConnections",
+      "getInstagramPostInteractingUsers",
+      "getInstagramUsersByKeywords",
+      "getInstagramPostsByIds",
+      "getInstagramPostsByUser",
+      "getInstagramPostsByKeywords",
+      "getInstagramCommentsByPostId",
+      "getRedditUser",
+      "searchRedditUsers",
+      "getRedditUsersByKeywords",
+      "getRedditPostsByKeywords",
+      "getRedditPostWithCommentsById",
+      "getRedditCommentsByKeywords",
+      "searchRedditSubreddits",
+      "getRedditSubredditWithPostsByName",
+      "getRedditSubredditsByKeywords",
+      "getTiktokUser",
+      "searchTiktokUsers",
+      "getTiktokUsersByKeywords",
+      "getTiktokUsersByHashtags",
+      "getTiktokPostsByIds",
+      "getTiktokPostsByUser",
+      "getTiktokPostsByKeywords",
+      "getTiktokPostsByHashtags",
+      "getTiktokCommentsByPostId",
+      "checkOperationStatus",
+      "cancelOperation",
+      "getUserAccessKey",
+      "checkAccessKeyStatus",
+      "getTrackedItems",
+      "addTrackedItems",
+      "removeTrackedItems",
+      "getAccountDetails"
+    ]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "uiHints": {
+    "accessKey": {
+      "label": "Xpoz API Access Key",
+      "help": "Bearer token for authenticating with the Xpoz MCP server. Get yours at https://xpoz.ai",
+      "sensitive": true,
+      "placeholder": "paste your access key here"
+    },
+    "serverUrl": {
+      "label": "Server URL",
+      "help": "Xpoz MCP server endpoint. Only change this if using a custom deployment.",
+      "advanced": true,
+      "placeholder": "https://mcp.xpoz.ai/mcp"
+    },
+    "timeoutMs": {
+      "label": "Request Timeout (ms)",
+      "help": "Maximum time to wait for a tool call response. Default: 300000 (5 minutes).",
+      "advanced": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "serverUrl": {
+        "type": "string",
+        "description": "Xpoz MCP server URL",
+        "default": "https://mcp.xpoz.ai/mcp"
+      },
+      "accessKey": {
+        "type": "string",
+        "description": "Xpoz API access key (Bearer token). Get yours at https://xpoz.ai"
+      },
+      "timeoutMs": {
+        "type": "number",
+        "description": "Request timeout in milliseconds",
+        "default": 300000
+      }
+    },
+    "required": ["accessKey"],
+    "additionalProperties": false
+  }
+}
