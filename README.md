@@ -100,6 +100,23 @@ Most search and listing tools support three response modes via the `responseType
 - **`paging`** — Async paginated results (100/page), poll with `checkOperationStatus`
 - **`csv`** — Async CSV export, poll for S3 download link
 
+## Companion X/Twitter workflow
+
+Xpoz is the cross-platform intelligence layer for Twitter/X, Instagram, Reddit,
+and TikTok. If an OpenClaw workflow also needs account-backed X/Twitter
+operations outside this plugin, pair it with TweetClaw as a separate plugin:
+
+- Use Xpoz for broad social discovery, profile lookup, post search, comments,
+  tracked items, and CSV exports across supported platforms.
+- Use TweetClaw for X/Twitter-specific source packets, reply context, monitor
+  events, media checks, giveaway workflows, and approval-gated post or reply
+  actions.
+- Keep write-like actions in the plugin that owns the connected account and
+  require an operator review step before publishing.
+
+This keeps Xpoz focused on social intelligence while letting teams add
+TweetClaw only when their agent needs X/Twitter account-backed workflows.
+
 ## Query Syntax
 
 Keyword search tools support:
